@@ -25,9 +25,9 @@ class MapBloc extends Bloc<MapEvent, MapState> {
     );
 
     locationStateSubscription = locationBloc.stream.listen((locationState) {
-      // if (locationState.lastKnownLocation != null) {
-      //   add(UpdateUserPolylineEvent(locationState.myLocationHistory));
-      // }
+      if (locationState.lastKnownLocation != null) {
+        add(UpdateUserPolylineEvent(locationState.myLocationHistory!));
+      }
 
       if (!state.isFollowingUser) return;
       if (locationState.lastKnownLocation == null) return;
