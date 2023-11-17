@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:mapas/feature/maps/presentation/bloc/location/location_bloc.dart';
+import 'package:mapas/feature/maps/presentation/views/btn_follow_user.dart';
 import 'package:mapas/feature/maps/presentation/views/btn_location.dart';
 import 'package:mapas/feature/maps/presentation/views/map_view.dart';
 
@@ -42,6 +43,7 @@ class _MapasScreenState extends State<MapasScreen> {
       floatingActionButton: const Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          BtnFollowUser(),
           BtnCurrentLocation(),
         ],
       ),
